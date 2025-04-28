@@ -1,0 +1,43 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1>Mood Tracker 😊</h1>
+
+<!-- Mood Picker -->
+<div id="moodPicker">
+  <button class="moodBtn">😊</button>
+  <button class="moodBtn">😐</button>
+  <button class="moodBtn">😢</button>
+  <button class="moodBtn">😡</button>
+  <button class="moodBtn">🤩</button>
+</div>
+
+<div id="noteContainer" class="contentContainer">
+<!-- Note Input -->
+<textarea id="noteInput" placeholder="Write something about your day..."></textarea><br>
+</div>
+
+<div id ="actionContainer" class="contentContainer">
+<!-- Save Button -->
+<button id="saveBtn">Save Mood</button>
+
+</div>
+<!-- History -->
+<div>
+<button id="historyBtn">History</button>
+<button id= "clearHistoryBtn">Clear Hishory</button>
+</div>
+<div>
+<input type="date" id="startDate">
+<input type="date" id="endDate">
+<button id="applyBtn">Apply</button>
+<button id="todayBtn">Filter by today</button>
+</div>
+ <div id = "historyList">
+ </div>
+
+</body>
+<script src="mood.js"></script>
+
