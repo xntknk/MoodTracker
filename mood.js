@@ -48,7 +48,7 @@ document.getElementById("historyBtn").addEventListener("click", () => {
   // console.log(history)
   history.forEach((entry) => {
     document.getElementById("historyList").innerHTML += `
-      <p>📅 ${entry.date} – ${entry.mood} ${entry.note}</p>
+      <li>📅 ${entry.date} – ${entry.mood} ${entry.note}</li>
     `;
   });
 });
@@ -102,3 +102,25 @@ document.getElementById("applyBtn").addEventListener("click", () => {
     });
   }
 });
+document.getElementById("statBtn").addEventListener("click", () => {
+  const moodLog = JSON.parse(localStorage.getItem("moodLog")) || [];
+  const moodCount = { "😊": 0, "😢": 0, "😡": 0, "😐": 0, "🤩": 0 };
+  moodLog.forEach((entry) => {
+    if (moodCount[entry.mood] !== undefined) {
+      moodCount[entry.mood]++;
+    }
+  });
+  const historyDiv = document.getElementById("stat");
+  historyDiv.innerHTML = "";
+  for (const mood in moodCount) {
+    historyDiv.innerHTML += `
+      <p>${mood} : ${moodCount[mood]} ครั้ง</p>
+    `;
+  }
+  const total = moodLog.length;
+  const average = total ? (moodCount["😊"] / total) * 100 : 0;
+});
+
+
+
+

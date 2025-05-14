@@ -22,21 +22,22 @@
 <div id ="actionContainer" class="contentContainer">
 <!-- Save Button -->
 <button id="saveBtn">Save Mood</button>
-
-</div>
-<!-- History -->
-<div>
 <button id="historyBtn">History</button>
 <button id= "clearHistoryBtn">Clear Hishory</button>
 </div>
 <div>
-<input type="date" id="startDate">
-<input type="date" id="endDate">
+<input type="date" id="startDate" class="dateInput">
+<p> - </p>
+<input type="date" id="endDate" class="dateInput">
 <button id="applyBtn">Apply</button>
 <button id="todayBtn">Filter by today</button>
+<button id="statBtn">View Statistic</button>
 </div>
- <div id = "historyList">
- </div>
+<div>
+  <ul id = "historyList"></ul>
+  <ul id="stat"></ul>
+</div>
+
 
 </body>
 <script src="mood.js"></script>
